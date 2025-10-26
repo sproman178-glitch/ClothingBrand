@@ -1,0 +1,291 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegance - Premium Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ELEGANCE</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#men">Men</a></li>
+                <li><a href="#women">Women</a></li>
+                <li><a href="#accessories">Accessories</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search products...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <i class="fas fa-user"></i>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Slideshow -->
+    <section id="home" class="hero">
+        <div class="hero-slideshow">
+            <div class="slide active">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fashion Model 1">
+                <div class="slide-content">
+                    <h1>New Summer Collection</h1>
+                    <p>Discover the latest trends in fashion</p>
+                    <button class="cta-button">Shop Now</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fashion Model 2">
+                <div class="slide-content">
+                    <h1>Elegant Evening Wear</h1>
+                    <p>Perfect for your special occasions</p>
+                    <button class="cta-button">Explore</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fashion Model 3">
+                <div class="slide-content">
+                    <h1>Premium Quality</h1>
+                    <p>Where style meets sophistication</p>
+                    <button class="cta-button">Shop Collection</button>
+                </div>
+            </div>
+        </div>
+        <div class="slide-indicators">
+            <span class="indicator active" onclick="currentSlide(1)"></span>
+            <span class="indicator" onclick="currentSlide(2)"></span>
+            <span class="indicator" onclick="currentSlide(3)"></span>
+        </div>
+        <button class="slide-nav prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="slide-nav next" onclick="changeSlide(1)">&#10095;</button>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Men's Fashion">
+                    <div class="category-overlay">
+                        <h3>Men's Collection</h3>
+                        <p>Sophisticated styles for the modern gentleman</p>
+                        <button class="category-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Women's Fashion">
+                    <div class="category-overlay">
+                        <h3>Women's Collection</h3>
+                        <p>Elegant pieces for every occasion</p>
+                        <button class="category-btn">Shop Now</button>
+                    </div>
+                </div>
+                <div class="category-card">
+                    <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Accessories">
+                    <div class="category-overlay">
+                        <h3>Accessories</h3>
+                        <p>Complete your look with our premium accessories</p>
+                        <button class="category-btn">Shop Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section id="collection" class="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-product="1">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Premium Shirt">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cotton Shirt</h3>
+                        <p class="product-price">$89.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="2">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Designer Blazer">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Designer Blazer</h3>
+                        <p class="product-price">$199.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="3">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Elegant Dress">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Elegant Evening Dress</h3>
+                        <p class="product-price">$149.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.7)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product="4">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Luxury Watch">
+                        <div class="product-overlay">
+                            <button class="quick-view">Quick View</button>
+                            <button class="add-to-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Luxury Timepiece</h3>
+                        <p class="product-price">$299.99</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Subscribe to our newsletter for exclusive offers and style tips</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email address" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>ELEGANCE</h3>
+                    <p>Curating the finest fashion pieces for the modern lifestyle. Quality, style, and sophistication in every collection.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#press">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#shipping">Shipping Info</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#size-guide">Size Guide</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> hello@elegance.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Fashion Street, NY</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Elegance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
