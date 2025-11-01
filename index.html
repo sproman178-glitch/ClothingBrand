@@ -17,20 +17,29 @@
             </div>
             <ul class="nav-menu">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#collection">Collection</a></li>
-                <li><a href="#men">Men</a></li>
-                <li><a href="#women">Women</a></li>
-                <li><a href="#accessories">Accessories</a></li>
                 <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact Us</a></li>
             </ul>
             <div class="nav-icons">
                 <div class="search-container">
                     <input type="text" class="search-bar" placeholder="Search products...">
                     <i class="fas fa-search search-icon"></i>
                 </div>
-                <i class="fas fa-user"></i>
+                <div class="profile-dropdown">
+                    <div class="profile-icon">
+                        <i class="fas fa-user"></i>
+                        <span>You</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#my-orders">My Orders</a>
+                        <a href="#my-wishlist">My Wishlist</a>
+                        <a href="#my-submits">My Submits</a>
+                        <a href="#edit-profile">Edit Profile</a>
+                    </div>
+                </div>
                 <div class="cart-icon">
                     <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-text">My Cart</span>
                     <span class="cart-count">0</span>
                 </div>
             </div>
@@ -46,27 +55,35 @@
     <section id="home" class="hero">
         <div class="hero-slideshow">
             <div class="slide active">
-                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fashion Model 1">
+                <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Competition Poster">
                 <div class="slide-content">
-                    <h1>New Summer Collection</h1>
-                    <p>Discover the latest trends in fashion</p>
-                    <button class="cta-button">Shop Now</button>
+                    <h1>T-Shirt, Hoodies & Polo T-Shirts Competition</h1>
+                    <p>Showcase your style and win amazing prizes</p>
+                    <button class="cta-button">Participate Now</button>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fashion Model 2">
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="T-Shirts Collection">
                 <div class="slide-content">
-                    <h1>Elegant Evening Wear</h1>
-                    <p>Perfect for your special occasions</p>
-                    <button class="cta-button">Explore</button>
+                    <h1>Premium T-Shirts</h1>
+                    <p>Comfort meets style in our latest collection</p>
+                    <button class="cta-button">Shop T-Shirts</button>
                 </div>
             </div>
             <div class="slide">
-                <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Fashion Model 3">
+                <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Hoodies Collection">
                 <div class="slide-content">
-                    <h1>Premium Quality</h1>
-                    <p>Where style meets sophistication</p>
-                    <button class="cta-button">Shop Collection</button>
+                    <h1>Cozy Hoodies</h1>
+                    <p>Stay warm and stylish with our hoodie collection</p>
+                    <button class="cta-button">Shop Hoodies</button>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Polo T-Shirts Collection">
+                <div class="slide-content">
+                    <h1>Classic Polo T-Shirts</h1>
+                    <p>Timeless elegance for every occasion</p>
+                    <button class="cta-button">Shop Polo T-Shirts</button>
                 </div>
             </div>
         </div>
@@ -74,6 +91,7 @@
             <span class="indicator active" onclick="currentSlide(1)"></span>
             <span class="indicator" onclick="currentSlide(2)"></span>
             <span class="indicator" onclick="currentSlide(3)"></span>
+            <span class="indicator" onclick="currentSlide(4)"></span>
         </div>
         <button class="slide-nav prev" onclick="changeSlide(-1)">&#10094;</button>
         <button class="slide-nav next" onclick="changeSlide(1)">&#10095;</button>
@@ -117,12 +135,11 @@
         <div class="container">
             <h2 class="section-title">Featured Products</h2>
             <div class="product-grid">
-                <div class="product-card" data-product="1">
+                <div class="product-card" data-product="1" onclick="window.location.href='product.html'">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Premium Shirt">
                         <div class="product-overlay">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-item" onclick="event.stopPropagation(); window.location.href='product.html'">View Item</button>
                         </div>
                     </div>
                     <div class="product-info">
@@ -139,12 +156,11 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-product="2">
+                <div class="product-card" data-product="2" onclick="window.location.href='product.html'">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Designer Blazer">
                         <div class="product-overlay">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-item" onclick="event.stopPropagation(); window.location.href='product.html'">View Item</button>
                         </div>
                     </div>
                     <div class="product-info">
@@ -161,12 +177,11 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-product="3">
+                <div class="product-card" data-product="3" onclick="window.location.href='product.html'">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Elegant Dress">
                         <div class="product-overlay">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-item" onclick="event.stopPropagation(); window.location.href='product.html'">View Item</button>
                         </div>
                     </div>
                     <div class="product-info">
@@ -183,12 +198,11 @@
                     </div>
                 </div>
 
-                <div class="product-card" data-product="4">
+                <div class="product-card" data-product="4" onclick="window.location.href='product.html'">
                     <div class="product-image">
                         <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" alt="Luxury Watch">
                         <div class="product-overlay">
-                            <button class="quick-view">Quick View</button>
-                            <button class="add-to-cart">Add to Cart</button>
+                            <button class="view-item" onclick="event.stopPropagation(); window.location.href='product.html'">View Item</button>
                         </div>
                     </div>
                     <div class="product-info">
