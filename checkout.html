@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Elegance Store</title>
+    <link rel="stylesheet" href="checkout-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="checkout-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <path d="M16 4C9 4 3 10 3 16C3 19 4 22 6 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16 28C23 28 29 22 29 16C29 13 28 10 26 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M16 12C14.9 12 14 12.9 14 14C14 15.1 14.9 16 16 16C17.1 16 18 15.1 18 14C18 12.9 17.1 12 16 12Z" fill="currentColor"/>
+                    <path d="M8 24C10 18 12 14 16 14C20 14 22 18 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </a>
+            <div class="header-right">
+                <a href="#" class="contact-support">Contact support</a>
+                <div class="user-icon">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Checkout Main Container -->
+    <div class="checkout-container">
+        <!-- Right Column - Checkout Form -->
+        <div class="checkout-form-column">
+            <h1 class="checkout-title">Checkout</h1>
+            
+            <!-- Apple Pay Button -->
+            <button class="apple-pay-btn">
+                <i class="fab fa-apple"></i>
+                <span>Pay</span>
+            </button>
+            
+            <div class="divider">
+                <span class="divider-text">or</span>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="checkout-section">
+                <h2 class="section-heading">Contact information</h2>
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone" required>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I have read the terms and conditions and agree to the sale of my personal information to the highest bidder.</label>
+                </div>
+                <button class="continue-btn" id="continue-btn">Continue</button>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="checkout-section collapsed" id="payment-section">
+                <h2 class="section-heading">Payment details</h2>
+                <div class="payment-options">
+                    <div class="payment-option" data-payment="upi">
+                        <input type="radio" name="payment-method" id="upi" value="upi" required>
+                        <label for="upi">
+                            <i class="fas fa-mobile-alt"></i>
+                            <span>UPI</span>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-payment="credit-card">
+                        <input type="radio" name="payment-method" id="credit-card" value="credit-card">
+                        <label for="credit-card">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Credit Card</span>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-payment="debit-card">
+                        <input type="radio" name="payment-method" id="debit-card" value="debit-card">
+                        <label for="debit-card">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Debit Card</span>
+                        </label>
+                    </div>
+                    <div class="payment-option" data-payment="net-banking">
+                        <input type="radio" name="payment-method" id="net-banking" value="net-banking">
+                        <label for="net-banking">
+                            <i class="fas fa-university"></i>
+                            <span>Net Banking</span>
+                        </label>
+                    </div>
+                </div>
+                <button class="continue-btn" id="continue-payment-btn">Continue</button>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="checkout-section collapsed" id="shipping-section">
+                <h2 class="section-heading">Shipping address</h2>
+                <div class="form-group">
+                    <label for="shipping-name">Full name</label>
+                    <input type="text" id="shipping-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-address">Address</label>
+                    <input type="text" id="shipping-address" placeholder="Street address" required>
+                </div>
+                <div class="form-group">
+                    <label for="shipping-city">City</label>
+                    <input type="text" id="shipping-city" placeholder="Enter city" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="shipping-state">State</label>
+                        <input type="text" id="shipping-state" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="shipping-zip">ZIP code</label>
+                        <input type="text" id="shipping-zip" placeholder="ZIP" required>
+                    </div>
+                </div>
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="same-as-billing">
+                    <label for="same-as-billing">Use same address for billing</label>
+                </div>
+                <button class="continue-btn" id="continue-shipping-btn">Continue</button>
+            </div>
+
+            <!-- Billing Address -->
+            <div class="checkout-section collapsed" id="billing-section">
+                <h2 class="section-heading">Billing address</h2>
+                <div class="form-group">
+                    <label for="billing-name">Full name</label>
+                    <input type="text" id="billing-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="billing-address">Address</label>
+                    <input type="text" id="billing-address" placeholder="Street address" required>
+                </div>
+                <div class="form-group">
+                    <label for="billing-city">City</label>
+                    <input type="text" id="billing-city" placeholder="Enter city" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="billing-state">State</label>
+                        <input type="text" id="billing-state" placeholder="State" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="billing-zip">ZIP code</label>
+                        <input type="text" id="billing-zip" placeholder="ZIP" required>
+                    </div>
+                </div>
+                <button class="continue-btn" id="continue-billing-btn">Continue</button>
+            </div>
+
+            <!-- Review Section -->
+            <div class="checkout-section collapsed" id="review-section">
+                <h2 class="section-heading">Review</h2>
+                <div class="review-content">
+                    <p>Please review your order details before proceeding.</p>
+                </div>
+                <button class="place-order-btn" id="place-order-btn">Place Order</button>
+            </div>
+        </div>
+
+        <!-- Left Column - Order Summary -->
+        <div class="order-summary-column">
+            <h2 class="summary-title">Order summary</h2>
+            <div class="order-items" id="order-items">
+                <!-- Order items will be populated by JavaScript -->
+            </div>
+            <div class="order-summary-footer">
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Taxes</span>
+                    <span id="summary-taxes">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span id="summary-shipping">$0.00</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total</span>
+                    <span id="summary-total">$0.00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="checkout-script.js"></script>
+</body>
+</html>
+

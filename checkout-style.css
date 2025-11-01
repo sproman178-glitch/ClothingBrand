@@ -1,0 +1,488 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #ffffff;
+}
+
+/* Header */
+.checkout-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.logo svg {
+    color: #2563eb;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.contact-support {
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.contact-support:hover {
+    color: #2563eb;
+}
+
+.user-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.user-icon:hover {
+    background: #e5e7eb;
+}
+
+.user-icon i {
+    color: #666;
+    font-size: 16px;
+}
+
+/* Checkout Container */
+.checkout-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 60px;
+}
+
+/* Checkout Title */
+.checkout-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+}
+
+/* Apple Pay Button */
+.apple-pay-btn {
+    width: 100%;
+    background: #000000;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    transition: background 0.3s ease;
+}
+
+.apple-pay-btn:hover {
+    background: #333333;
+}
+
+.apple-pay-btn i {
+    font-size: 20px;
+}
+
+/* Divider */
+.divider {
+    position: relative;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e0e0e0;
+}
+
+.divider-text {
+    background: white;
+    padding: 0 15px;
+    color: #666;
+    font-size: 14px;
+    position: relative;
+}
+
+/* Checkout Section */
+.checkout-section {
+    margin-top: 40px;
+}
+
+.checkout-section.collapsed {
+    display: none;
+}
+
+.checkout-section.active {
+    display: block;
+}
+
+.section-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Form Styles */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #d0d0d0;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-group input[type="checkbox"] {
+    margin-top: 3px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.continue-btn,
+.place-order-btn {
+    width: 100%;
+    background: #d0d0d0;
+    color: white;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.continue-btn:hover,
+.place-order-btn:hover {
+    background: #b0b0b0;
+}
+
+.place-order-btn {
+    background: #8b4513;
+}
+
+.place-order-btn:hover {
+    background: #6b3410;
+}
+
+/* Payment Options */
+.payment-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    position: relative;
+}
+
+.payment-option input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.payment-option label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.payment-option label i {
+    font-size: 20px;
+    color: #666;
+}
+
+.payment-option label span {
+    font-size: 14px;
+    font-weight: 500;
+    color: #333;
+}
+
+.payment-option input[type="radio"]:checked + label {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.payment-option input[type="radio"]:checked + label i,
+.payment-option input[type="radio"]:checked + label span {
+    color: #2563eb;
+}
+
+/* Order Summary */
+.order-summary-column {
+    position: sticky;
+    top: 100px;
+    align-self: start;
+}
+
+.summary-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 25px;
+}
+
+.order-items {
+    margin-bottom: 30px;
+}
+
+.order-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.order-item-details {
+    flex: 1;
+}
+
+.order-item-details h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 5px;
+}
+
+.order-item-details p {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.order-item-details .item-price {
+    font-weight: 600;
+    color: #333;
+    margin-top: 5px;
+}
+
+.order-item-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.order-item-actions a {
+    font-size: 12px;
+    color: #9333ea;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.order-item-actions a:hover {
+    color: #7c3aed;
+}
+
+/* Order Summary Footer */
+.order-summary-footer {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 14px;
+    color: #333;
+}
+
+.summary-row:last-child {
+    margin-bottom: 0;
+}
+
+.total-row {
+    padding-top: 15px;
+    border-top: 2px solid #e0e0e0;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Review Section */
+.review-content {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.review-content p {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .checkout-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .order-summary-column {
+        position: static;
+    }
+
+    .payment-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .checkout-container {
+        padding: 20px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Empty Cart Message */
+.empty-cart-message {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.empty-cart-message i {
+    font-size: 64px;
+    color: #d0d0d0;
+    margin-bottom: 20px;
+}
+
+.empty-cart-message p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.empty-cart-message a {
+    display: inline-block;
+    background: #8b4513;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.empty-cart-message a:hover {
+    background: #6b3410;
+}
+

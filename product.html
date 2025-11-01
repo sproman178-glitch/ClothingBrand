@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Tee - Elegance Store</title>
+    <link rel="stylesheet" href="product-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>ELEGANCE</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact Us</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="search-container">
+                    <input type="text" class="search-bar" placeholder="Search products...">
+                    <i class="fas fa-search search-icon"></i>
+                </div>
+                <div class="profile-dropdown">
+                    <div class="profile-icon">
+                        <i class="fas fa-user"></i>
+                        <span>You</span>
+                    </div>
+                    <div class="dropdown-menu">
+                        <a href="#my-orders">My Orders</a>
+                        <a href="#my-wishlist">My Wishlist</a>
+                        <a href="#my-submits">My Submits</a>
+                        <a href="#edit-profile">Edit Profile</a>
+                    </div>
+                </div>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-text">My Cart</span>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container">
+            <div class="product-layout">
+                <!-- Product Image -->
+                <div class="product-image-container">
+                    <div class="main-image">
+                        <img id="main-product-image" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Basic Tee">
+                    </div>
+                    <div class="image-thumbnails">
+                        <img class="thumbnail active" src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Front View">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1594633312681-425c7b97ccd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Side View">
+                        <img class="thumbnail" src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" alt="Back View">
+                    </div>
+                </div>
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <div class="product-header">
+                        <h1 class="product-title">Basic Tee</h1>
+                        <div class="product-price">$35</div>
+                    </div>
+
+                    <!-- Rating -->
+                    <div class="product-rating">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                        <span class="rating-text">3.9</span>
+                        <a href="#" class="reviews-link">See all 512 reviews</a>
+                    </div>
+
+                    <!-- Color Selection -->
+                    <div class="color-selection">
+                        <h3>Color</h3>
+                        <div class="color-options">
+                            <div class="color-option selected" data-color="black">
+                                <div class="color-swatch black"></div>
+                            </div>
+                            <div class="color-option" data-color="gray">
+                                <div class="color-swatch gray"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Size Selection -->
+                    <div class="size-selection">
+                        <div class="size-header">
+                            <h3>Size</h3>
+                            <a href="#" class="size-chart-link">See sizing chart</a>
+                        </div>
+                        <div class="size-options">
+                            <button class="size-option" data-size="XXS">XXS</button>
+                            <button class="size-option" data-size="XS">XS</button>
+                            <button class="size-option selected" data-size="S">S</button>
+                            <button class="size-option" data-size="M">M</button>
+                            <button class="size-option" data-size="L">L</button>
+                            <button class="size-option unavailable" data-size="XL">XL</button>
+                        </div>
+                    </div>
+
+                    <!-- Add to Cart Button -->
+                    <button class="add-to-cart-btn" id="add-to-cart">
+                        Add to cart
+                    </button>
+
+                    <!-- Product Description -->
+                    <div class="product-description">
+                        <h3>Description</h3>
+                        <p>The Basic tee is an honest new take on a classic. The tee uses super soft, pre-shrunk cotton for true comfort and a dependable fit. They are hand cut and sewn locally, with a special dye technique that gives each tee it's own look. Looking to stock your closet? The Basic tee also comes in a 3-pack or 5-pack at a bundle discount.</p>
+                    </div>
+
+                    <!-- Fabric & Care -->
+                    <div class="fabric-care">
+                        <h3>Fabric & Care</h3>
+                        <ul>
+                            <li>Only the best materials</li>
+                            <li>Ethically and locally made</li>
+                            <li>Pre-washed and pre-shrunk</li>
+                            <li>Machine wash cold with similar colors</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Shopping Cart</h3>
+                <span class="close-cart">&times;</span>
+            </div>
+            <div class="cart-items">
+                <!-- Cart items will be populated by JavaScript -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Container -->
+    <div id="notification-container"></div>
+
+    <script src="product-script.js"></script>
+</body>
+</html>
+
