@@ -157,20 +157,22 @@ if (cartIcon) { cartIcon.addEventListener('click', () => { cartModal.style.displ
 if (closeCartBtn) { closeCartBtn.addEventListener('click', () => { cartModal.style.display = 'none'; document.body.style.overflow = 'auto'; }); }
 window.addEventListener('click', (e) => { if (e.target === cartModal) { cartModal.style.display = 'none'; document.body.style.overflow = 'auto'; } });
 
-addToCartButtons.forEach(button => {
-    button.addEventListener('click', (e) => {
-        e.preventDefault();
-        const productCard = button.closest('.product-card');
-        addToCart(parseInt(productCard.dataset.product));
-        productCard.querySelector('.product-overlay').style.opacity = '0';
+// Product cards now navigate to product.html on click
+document.querySelectorAll('.product-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        // Only navigate if not clicking on the view item button
+        if (!e.target.classList.contains('view-item')) {
+            window.location.href = 'product.html';
+        }
     });
 });
 
-document.querySelectorAll('.quick-view').forEach(button => {
+// View item buttons
+document.querySelectorAll('.view-item').forEach(button => {
     button.addEventListener('click', (e) => {
         e.preventDefault();
-        const productCard = button.closest('.product-card');
-        showQuickView(products[parseInt(productCard.dataset.product)]);
+        e.stopPropagation();
+        window.location.href = 'product.html';
     });
 });
 
@@ -209,11 +211,8 @@ document.querySelectorAll('.category-btn').forEach(btn => {
 if (checkoutBtn) {
     checkoutBtn.addEventListener('click', () => {
         if (cart.length === 0) { showNotification('Cart is empty!', 'warning'); return; }
-        const orderId = 'ORD-' + Math.random().toString(36).substr(2, 9).toUpperCase();
-        showNotification(`Order #${orderId} placed! Total: $${cartTotalElement.textContent}`, 'success');
-        clearCart();
-        cartModal.style.display = 'none';
-        document.body.style.overflow = 'auto';
+        // Redirect to checkout page
+        window.location.href = 'checkout.html';
     });
 }
 
